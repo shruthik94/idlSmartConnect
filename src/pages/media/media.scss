@@ -1,0 +1,23 @@
+page-media {
+    .add-media-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: 0px;
+        border-bottom: 1px solid #dedede !important;
+        margin: 0px;
+        background-color: #ffffff;
+        border-radius: 0px;
+        border: 0px;
+    }
+    .file-name, .duration{
+        width: 50%;
+        font-size: 16px;
+    }
+    ion-list.list-items.list.list-md .label-md {
+        margin: 0 !important;
+        display: flex;
+    }
+}

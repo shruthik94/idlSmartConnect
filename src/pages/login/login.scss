@@ -1,0 +1,25 @@
+/* @author : IDL Systems India Pvt Ltd, @ copyright 2018
+ * @version :
+ * @Created by : Sangeetha H M
+ * @creationDate : 29/03/2019
+ * @changeHistory :
+ * @desc : css for login page.
+ * date                Modified By                      Description
+ *
+ *
+*/
+page-login {
+    .main-body.login-page {
+        background-image: url(../assets/imgs/login.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        margin: 0px;
+    }
+    
+    .heading {
+        color: #ffffff;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,120 @@
+<!--
+    Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<page-header></page-header>
+<page-sidebar></page-sidebar>
+
+<ion-content no-padding>
+  <ion-row no-padding>
+    <ion-col no-padding class="main-content" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+      <div class="right-section-content">
+        <h1 margin>Device Details</h1>
+        <ion-row>
+          <div class="device-details" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding>
+            <ion-list radio-group>
+              <!-- mode 1 group details -->
+              <div class="mode1-block" col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 no-padding>
+                <ion-item no-padding>
+                  <ion-radio value="Mode1" (ionSelect)="radioCheckedMode1()"></ion-radio>
+                  <ion-label class="mode-label">Mode 1</ion-label>
+                </ion-item>
+                <div class="time-block">
+                  <ion-item class="border-input" no-padding>
+                    <ion-label>Start Date</ion-label>
+                    <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="myStartDateMode1"></ion-datetime>
+                  </ion-item>
+                  <ion-item class="border-input" no-padding>
+                    <ion-label>Start Time</ion-label>
+                    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myStartTimeMode1"></ion-datetime>
+                  </ion-item>
+                </div>
+                <ion-row class="list-row" margin-top>
+                  <div class="video-lists first-block-list scrollbar" col-md-6 col-lg-6>
+                    <ion-list  class="force-overflow">
+                      <p margin-left>Selected videos</p>
+                      <ion-item no-margin class="video-added-list" *ngFor="let videos of dataMode1; let i=index;" no-padding>
+                        <div class="drag-list">
+                          <ion-icon (click)="removeVideoMode1(videos)" name="remove"></ion-icon>
+                        </div>
+                        <h2 margin-horizontal>{{ videos.ISCM_name }}</h2>
+                      </ion-item>
+                    </ion-list>
+                  </div>
+                  <div class="video-lists scrollbar" col-md-6 col-lg-6>
+                    <ion-list class="force-overflow">
+                      <p padding-left>Select the video to add</p>
+                      <ion-item no-margin class="video-added-list" *ngFor="let videos of mediaData; let i=index;" no-padding>
+                        <div class="drag-list">
+                          <ion-icon (click)="addVideoMode1(videos)" name="add"></ion-icon>
+                        </div>
+                        <h2 margin-horizontal>{{ videos.ISCM_name }}</h2>
+                      </ion-item>
+                    </ion-list>
+                  </div>
+                </ion-row>
+              </div>
+              <!-- mode 2 group details -->
+              <div class="mode2-block" col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 no-padding margin-vertical>
+                <ion-item no-padding>
+                  <ion-radio value="Mode2" (ionSelect)="radioCheckedMode2()"></ion-radio>
+                  <ion-label class="mode-label">Mode 2</ion-label>
+                </ion-item>
+                <div class="time-block">
+                  <ion-item class="border-input" no-padding>
+                    <ion-label>Start Date</ion-label>
+                    <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="myStartDateMode2"></ion-datetime>
+                  </ion-item>
+                  <ion-item class="border-input" no-padding>
+                    <ion-label>Start Time</ion-label>
+                    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myStartTimeMode2"></ion-datetime>
+                  </ion-item>
+                </div>
+                <div class="time-block">
+                  <ion-item class="border-input" no-padding>
+                    <ion-label>End Date</ion-label>
+                    <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="myEndDateMode2"></ion-datetime>
+                  </ion-item>
+                  <ion-item class="border-input" no-padding>
+                    <ion-label>End Time</ion-label>
+                    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myEndTimeMode2"></ion-datetime>
+                  </ion-item>
+                </div>
+                <ion-row class="list-row" margin-top>
+                  <div class="video-lists first-block-list scrollbar" col-md-6 col-lg-6>
+                    <ion-list class="force-overflow">
+                      <p margin-left>Selected videos</p>
+                      <ion-item no-margin class="video-added-list" *ngFor="let videos of dataMode2; let i=index;" no-padding>
+                        <div class="drag-list">
+                          <ion-icon (click)="removeVideoMode2(videos)" name="remove"></ion-icon>
+                        </div>
+                        <h2 margin-horizontal>{{ videos.ISCM_name }}</h2>
+                      </ion-item>
+                    </ion-list>
+                  </div>
+                  <div class="video-lists scrollbar" col-md-6 col-lg-6>
+                    <ion-list class="force-overflow">
+                      <p padding-left>Select the video to add</p>
+                      <ion-item no-margin class="video-added-list" *ngFor="let videos of mediaData; let i=index;" no-padding>
+                        <div class="drag-list">
+                          <ion-icon (click)="addVideoMode2(videos)" name="add"></ion-icon>
+                        </div>
+                        <h2 margin-horizontal>{{ videos.ISCM_name }}</h2>
+                      </ion-item>
+                    </ion-list>
+                  </div>
+                </ion-row>
+              </div>
+              <div class="mode1-block" col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 no-padding>
+                <button margin-bottom ion-button round float-right color="light">Cancel</button>
+                <button margin-bottom ion-button round float-right (click)="saveDeviceMedia()">Save</button>
+              </div>
+            </ion-list>
+          </div>
+        </ion-row>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

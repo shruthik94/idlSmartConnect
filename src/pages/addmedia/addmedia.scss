@@ -1,0 +1,27 @@
+page-addmedia {
+    .item-md.item-block .item-inner {
+        padding-right: 0px;
+        border-bottom: 1px solid #dedede !important;
+        margin: 4px 20px;
+        background-color: #ffffff;
+        border-radius: 0px;
+        border: 0px;
+    }
+    .list-md .item-input:last-child .input-wrapper {
+        border-bottom: 0px solid #dedede;
+    }
+    //form css
+    .label-md {
+        margin: 0px 0px 0px 0;
+    }
+    .item-label-stacked .text-input-md, .item-label-floating .text-input-md {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #1D2A3D;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        background: none !important; 
+    }
+}

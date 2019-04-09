@@ -1,0 +1,31 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<page-header></page-header>
+<page-sidebar></page-sidebar>
+
+<ion-content no-padding>
+  <ion-row no-padding>
+    <ion-col no-padding class="main-content" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+      <div class="right-section-content">
+        <h1 margin>Media</h1>
+        <button margin ion-button class="add-media-button" (click)="addnewmedia()">Add Media</button>
+        <ion-row margin>
+          <ion-col>
+            <ion-list class="list-items" no-padding no-margin>
+              <ion-item no-margin no-padding *ngFor="let video of mediaList; let i=index;">
+                <p class="file-name">{{video.ISCM_name}}</p>
+                <p class="duration">duration</p>
+                <button ion-button item-end (click)="videoView()">View</button>
+                <button ion-button item-end color="danger" (click)="videoDelete()">Delete</button>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

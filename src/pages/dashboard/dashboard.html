@@ -1,0 +1,28 @@
+
+<!--
+  Generated template for the MediaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<page-header></page-header>
+<page-sidebar></page-sidebar>
+<ion-content no-padding>
+    <ion-row no-padding>
+      <ion-col no-padding class="main-content" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+        
+        <div class="right-section-content">
+          <h1 margin-horizontal>Devices</h1>
+          <ion-row margin>
+            <div col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 (click)="devicedetails()" *ngFor="let device of deviceList; let i=index;">
+              <div class="device-blocks">
+                <div class="inside-blocks">
+                  <p>{{ device.ISCDR_id }} </p>
+                </div>
+              </div>
+            </div>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-content>
